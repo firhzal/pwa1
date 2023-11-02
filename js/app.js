@@ -48,7 +48,8 @@ if ("serviceWorker" in navigator) {
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err));
   });
-function getUserMedia(constraints) {
+
+  }function getUserMedia(constraints) {
   // if Promise-based API is available, use it
   if (navigator.mediaDevices) {
     return navigator.mediaDevices.getUserMedia(constraints);
@@ -94,18 +95,5 @@ function getStream (type) {
       alert('Error: ' + err);
     });
 }
-HTML
-<div class="columns">
-  <div class="column">
-    <p><button type="button" onclick="getStream('video')">Grab video</button></p>
-    
-    <video controls autoplay style="height:180px; width: 240px;"></video>
-  </div>
-  <div class="column">
-    <p><button type="button" onclick="getStream('audio')">Grab audio</button></p>
-    
-    <audio controls></audio>
-  </div>
-</div>
-  }
+
 
