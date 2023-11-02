@@ -1,7 +1,5 @@
 const container = document.querySelector(".container");
 
-document.addEventListener("DOMContentLoaded", showCoffees);
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
