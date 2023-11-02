@@ -48,7 +48,6 @@ if ("serviceWorker" in navigator) {
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err));
   });
-}
 function getUserMedia(constraints) {
   // if Promise-based API is available, use it
   if (navigator.mediaDevices) {
@@ -108,3 +107,5 @@ HTML
     <audio controls></audio>
   </div>
 </div>
+  }
+
