@@ -56,22 +56,3 @@ function getStream (type) {
 }
 // service-worker.js
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('my-cache-name').then(cache => {
-      return cache.addAll([
-        '/path/to/your/audio.mp3',
-        '/path/to/your/video.mp4',
-        // Hier weitere Ressourcen hinzufügen
-      ]);
-    })
-  );
-});
-
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});
