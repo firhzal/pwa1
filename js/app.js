@@ -55,4 +55,12 @@ function getStream (type) {
     });
 }
 
+const cacheName = 'static-shell-v1';
+const resourcesToPrecache = [
+  '/',
+'index.html',
+  'app.js',
+  'manifest.json',
+  ];
+
 
